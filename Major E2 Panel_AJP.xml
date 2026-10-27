@@ -208,7 +208,7 @@
         </menu>        
   
         <!-- Emil Remove Package - By Belfagor -->
-        <menu text="Emil Remove Package" icon="icons/plugins.png" description="Removing Plugin & Skins Tool - By Emil Nabil">
+        <menu text="Emil Remove Package" icon="icons/plugins.png" description="Removing Plugin And Skins Tool - By Emil Nabil">
             <title>Emil Remove Package Control</title>
                 <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Emil Remove Package">			
                     <ask>Are You Sure you Want To Install And Update Emil Remove Package?</ask>
