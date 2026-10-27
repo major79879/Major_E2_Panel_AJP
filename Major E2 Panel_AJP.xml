@@ -304,7 +304,7 @@
         <!-- OSCam EMU - By Linux Sat -->
         <menu text="OSCam EMU" icon="icons/plugins.png" description="Softcam OSCam Emu - By Linux Sat">
             <title>OSCam EMU Control</title>
-                <item text="Order To Install & Update" icon="icons/download.png" description="Install And Update OSCam Emu">			
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update OSCam Emu">			
                     <ask>Are You Sure you Want To Install And Update OSCam Emu?</ask>
                     <message>Successfully Installed And Updated!</message>
                     <command><![CDATA[ wget https://raw.githubusercontent.com/biko-73/OsCam_EMU/main/installer.sh -O - | /bin/sh ]]></command>
