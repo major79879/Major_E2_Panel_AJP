@@ -1,4 +1,4 @@
-<?xml id="ajpanel_menu" version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <menu>
     <title icon="icons/plugins.png">Major E2 Panel_AJPanel - By John Kamel</title>
 
@@ -291,7 +291,7 @@
                 <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Custom Channel Selection">			
                     <ask>Are You Sure you Want To Install And Update Custom Channel Selection?</ask>
                     <message>Successfully Installed And Updated!</message>
-                    <command><![CDATA[ wget -qO - https://raw.githubusercontent.com/popking159/customchannelselection/refs/heads/main/myinstaller.sh | /bin/sh ]]></command>
+                    <command><![CDATA[ wget -qO - https://raw*githubusercontent*com/popking159/customchannelselection/refs/heads/main/myinstaller.sh | /bin/sh ]]></command>
                 </item>
                 <item text="Order To Remove" icon="icons/setup.png" description="Remove Custom Channel Selection">				
                     <ask>Are You Sure you Want To Remove Custom Channel Selection?</ask>
@@ -421,16 +421,16 @@
         <!-- Ultra Audio - By Ahmed L-Hadary -->        
         <menu text="Ultra Audio" icon="icons/plugins.png" description="Playing External IP Audio - By Ahmed EL-Hadary">
             <title>Ultra Audio Control</title>
-                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Ultra Audio">			
-                    <ask>Are You Sure you Want To Install And Update Ultra Audio?</ask>
-                    <message>Successfully Installed And Updated!</message>	
-                    <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Ultra Audio">
-                </item>
-                <item text="Order To Remove" icon="icons/setup.png" description="Remove Ultra Audio">					
-                    <ask>Are You Sure you Want To Remove Ultra Audio?</ask>
-                    <message>Successfully Removed!</message>
-                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-ultraaudio; else opkg remove --force-depends enigma2-plugin-extensions-ultraaudio; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
-                </item>
+            <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Ultra Audio">			
+                <ask>Are You Sure you Want To Install And Update Ultra Audio?</ask>
+                <message>Successfully Installed And Updated!</message>	
+                <command><![CDATA[ wget -qO- https://raw.githubusercontent.com/K3bOra/UltraAudio/main/install.sh | /bin/sh ]]></command>
+            </item>
+            <item text="Order To Remove" icon="icons/setup.png" description="Remove Ultra Audio">					
+                <ask>Are You Sure you Want To Remove Ultra Audio?</ask>
+                <message>Successfully Removed!</message>
+                <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-ultraaudio; else opkg remove --force-depends enigma2-plugin-extensions-ultraaudio; fi && rm -rf "/usr/lib/enigma2/python/Plugins/Extensions/UltraAudio" && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+            </item>
         </menu>
 
         <!-- IP Audio Plus - By Ahmad Arjan -->        
@@ -628,17 +628,16 @@
         <!-- Xtream New - By Ahmed Hussein -->
         <menu text="Xtream New" icon="icons/plugins.png" description="Adding Paid IPTV - By Ahmed Hussein">
             <title>Xtream New Control</title>
-                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Xtream New">            
-                    <ask>Are You Sure you Want To Install And Update Xtream New?</ask>
-                    <message>Successfully Installed And Updated!</message>
-                    <command><![CDATA[ wget -q --no-check-certificate "https://raw.githubusercontent.com/ahmedhussein4342-lgtm/XtreamNew/main/install_xtreamnew.sh?cb=$(date +%s)" -O - | /bin/sh ]]></command>
-                </item>
-                <item text="Order To Remove" icon="icons/setup.png" description="Remove Xtream New">            
-                    <ask>Are You Sure you Want To Remove Xtream New?</ask>
-                    <message>Successfully Removed!</message>
-                    <item text="Order To Remove" icon="icons/setup.png" description="Remove Xtream New">
-                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-xtreamnew; else opkg remove --force-depends enigma2-plugin-extensions-xtreamnew; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
-                </item>
+            <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Xtream New">            
+                <ask>Are You Sure you Want To Install And Update Xtream New?</ask>
+                <message>Successfully Installed And Updated!</message>
+                <command><![CDATA[ wget -q --no-check-certificate "https://raw.githubusercontent.com/ahmedhussein4342-lgtm/XtreamNew/main/install_xtreamnew.sh?cb=$(date +%s)" -O - | /bin/sh ]]></command>
+            </item>
+            <item text="Order To Remove" icon="icons/setup.png" description="Remove Xtream New">            
+                <ask>Are You Sure you Want To Remove Xtream New?</ask>
+                <message>Successfully Removed!</message>
+                <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-xtreamnew; else opkg remove --force-depends enigma2-plugin-extensions-xtreamnew; fi; rm -rf "/usr/lib/enigma2/python/Plugins/Extensions/XtreamNew" && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+            </item>
         </menu>
 
         <!-- Tivi Mate E2 - By Opes Boy -->
