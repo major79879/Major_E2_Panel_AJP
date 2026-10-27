@@ -593,7 +593,7 @@
         </menu>
 
         <!-- Ultra Stalker - By Ahmed EL-Hadary -->
-        <menu text="Ultra Stalker" icon="icons/plugins.png" description="Free & Paid IPTV - By Ahmed EL-Hadary">
+        <menu text="Ultra Stalker" icon="icons/plugins.png" description="Free And Paid IPTV - By Ahmed EL-Hadary">
             <title>Ultra Stalker Control</title>
                 <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Ultra Stalker">            
                     <ask>Are You Sure you Want To Install And Update Ultra Stalker?</ask>
