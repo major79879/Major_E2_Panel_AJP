@@ -431,7 +431,7 @@
         </menu>
 
         <!-- Alkuds Ipaudio MAC Xtreme Player - By Ibrahim Hamdy -->        
-        <menu text="Alkuds Ipaudio MAC Xtreme Player" icon="icons/plugins.png" description="Playing External IP Audio & IPTV - By Ibrahim Hamdy">
+        <menu text="Alkuds Ipaudio MAC Xtreme Player" icon="icons/plugins.png" description="Playing External IP Audio And IPTV - By Ibrahim Hamdy">
             <title>Alkuds Ipaudio MAC Xtreme Player Control</title>
                 <item text="Order To Remove" icon="icons/setup.png" description="Remove IP Audio Plus">			
                     <ask>Are You Sure you Want To Install And Update Alkuds Ipaudio?</ask>
