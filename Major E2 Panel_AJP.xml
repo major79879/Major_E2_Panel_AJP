@@ -291,7 +291,7 @@
                 <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Custom Channel Selection">			
                     <ask>Are You Sure you Want To Install And Update Custom Channel Selection?</ask>
                     <message>Successfully Installed And Updated!</message>
-                    <command><![CDATA[ wget -qO - https://raw*githubusercontent*com/popking159/customchannelselection/refs/heads/main/myinstaller.sh | /bin/sh ]]></command>
+                    <command><![CDATA[ wget -qO - https://raw.githubusercontent.com/popking159/customchannelselection/refs/heads/main/myinstaller.sh | /bin/sh ]]></command>
                 </item>
                 <item text="Order To Remove" icon="icons/setup.png" description="Remove Custom Channel Selection">				
                     <ask>Are You Sure you Want To Remove Custom Channel Selection?</ask>
