@@ -4,7 +4,25 @@
 
 
     <!-- ======================================================= -->
-    <!-- 1. Image Order Category -->
+    <!-- 1. Major Panel Update -->
+    <!-- ======================================================= -->
+    <menu text="Major Panel Update" icon="icons/setup.png">
+        <title>Major Panel Update</title>
+
+        <!-- Major Panel Update -->        
+        <menu text="Major Panel Update" icon="icons/plugins.png" description="Update Major Panel Version">
+            <title>Major Panel Update Control</title>  
+                <item text="Order To Update" icon="icons/download.png" description="Update And Upgrade Order">			
+                <ask>Are You Sure you Want To Update Major Panel?</ask>
+                <message>Successfully Updated!</message>
+                <command><![CDATA[ wget -qO - https://raw.githubusercontent.com/major79879/Major_E2_Panel_AJP/refs/heads/main/Major%20E2%20Panel_AJP.sh | /bin/sh ]]></command>
+            </item>
+        </menu>
+    </menu>
+	
+
+    <!-- ======================================================= -->
+    <!-- 2. Image Order Category -->
     <!-- ======================================================= -->
     <menu text="Image Orders" icon="icons/setup.png">
         <title>Image Orders</title>
@@ -73,7 +91,7 @@
 
 
     <!-- ======================================================= -->
-    <!-- 2. Panels Category -->
+    <!-- 3. Panels Category -->
     <!-- ======================================================= -->
     <menu text="Panel Plugins" icon="icons/plugins.png">
         <title>Panel Plugins</title>
@@ -172,7 +190,7 @@
 
 
     <!-- ======================================================= -->
-    <!-- 3. Tools Category -->
+    <!-- 4. Tools Category -->
     <!-- ======================================================= -->
     <menu text="Tools Plugins" icon="icons/pvr.png">
         <title>Tools Plugins</title>
@@ -286,7 +304,7 @@
 
 
     <!-- ======================================================= -->
-    <!-- 4. Softcam Category -->
+    <!-- 5. Softcam Category -->
     <!-- ======================================================= -->
     <menu text="Softcam Plugins" icon="icons/key.png">
         <title>Softcam Plugins</title>
@@ -380,7 +398,7 @@
 
 
     <!-- ======================================================= -->
-    <!-- 5. Audio Category -->
+    <!-- 6. Audio Category -->
     <!-- ======================================================= -->
     <menu text="Audio Plugins" icon="icons/player.png">
         <title>Audio Plugins</title>
@@ -464,7 +482,7 @@
 	
 	
     <!-- ======================================================= -->
-    <!-- 6. Subtitle Category -->
+    <!-- 7. Subtitle Category -->
     <!-- ======================================================= -->
     <menu text="Subtitle Plugins" icon="icons/txt.png">
         <title>Subtitle Plugins</title>
@@ -518,7 +536,7 @@
 
 
     <!-- ======================================================= -->
-    <!-- 7. EPG Category -->
+    <!-- 8. EPG Category -->
     <!-- ======================================================= -->
     <menu text="EPG Plugins" icon="icons/epg.png">
         <title>EPG Plugins</title>
@@ -572,7 +590,7 @@
 
 
     <!-- ======================================================= -->
-    <!-- 8. IPTV Category -->
+    <!-- 9. IPTV Category -->
     <!-- ======================================================= -->
     <menu text="IPTV Plugins" icon="icons/iptv.png">
         <title>IPTV Plugins</title>
@@ -687,7 +705,7 @@
 
 
     <!-- ======================================================= -->
-    <!-- 9. Skin Category -->
+    <!-- 10. Skin Category -->
     <!-- ======================================================= -->
     <menu text="Skin Plugins" icon="icons/palette.png">
         <title>Skin Plugins</title>
@@ -801,7 +819,7 @@
 
 
     <!-- ======================================================= -->
-    <!-- 10. Others Category -->
+    <!-- 11. Others Category -->
     <!-- ======================================================= -->
     <menu text="Others Plugins" icon="icons/info.png">
         <title>Others Plugins</title>
