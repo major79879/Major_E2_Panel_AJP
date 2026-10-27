@@ -446,7 +446,7 @@
         </menu>
 
         <!-- My Hits - By Mohamed Nasser -->        
-        <menu text="My Hits" icon="icons/plugins.png" description="Playing & Downloading Songs - By Mohamed Nasser">
+        <menu text="My Hits" icon="icons/plugins.png" description="Playing And Downloading Songs - By Mohamed Nasser">
             <title>My Hits Control</title>
                 <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update My Hits">			
                     <ask>Are You Sure you Want To Install And Update My Hits?</ask>
