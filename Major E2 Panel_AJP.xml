@@ -1,0 +1,873 @@
+<?xml id="ajpanel_menu" version="1.0" encoding="utf-8"?>
+<menu>
+    <title icon="icons/plugins.png">Major E2 Panel_AJPanel - By John Kamel</title>
+
+
+    <!-- ======================================================= -->
+    <!-- 1. Image Order Category -->
+    <!-- ======================================================= -->
+    <menu text="Image Orders" icon="icons/setup.png">
+        <title>Image Orders</title>
+
+        <!-- OpenATV Update And Upgrade -->        
+        <menu text="OpenATV Update" icon="icons/plugins.png" description="Update And Upgrade The Image Version">
+            <title>OpenATV Update Control</title>  
+                <item text="Order To Update" icon="icons/download.png" description="Update And Upgrade Order">			
+                <ask>Are You Sure you Want To Update Image Packages?</ask>
+                <message>Successfully Updated!</message>
+                <command><![CDATA[ opkg update && opkg upgrade ]]></command>
+            </item>
+        </menu>
+
+        <!-- OpenATV Libarary_NANO -->        
+        <menu text="OpenATV Libarary_NANO" icon="icons/plugins.png" description="Install And Update Libarary NANO">
+            <title>OpenATV Libarary_NANO Control</title> 
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Libarary NANO Order">			
+                <ask>Are You Sure you Want To Install And Update Libarary NANO?</ask>
+                <message>Successfully Installed And Updated!</message>
+                <command><![CDATA[ opkg install nano ]]></command>
+            </item>
+        </menu>
+
+        <!-- OpenATV Libarary_WGET -->        
+        <menu text="OpenATV Libarary_WGET" icon="icons/plugins.png" description="Install And Update Libarary WGET">
+            <title>OpenATV Libarary_WGET Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Libarary WGET Order">			
+                <ask>Are You Sure you Want To Install And Update Libarary WGET?</ask>
+                <message>Successfully Installed And Updated!</message>
+                <command><![CDATA[ opkg install wget ]]></command>
+            </item>
+        </menu>
+
+        <!-- OpenATV Libarary_CURL -->        
+        <menu text="OpenATV Libarary_CURL" icon="icons/plugins.png" description="Install And Update Libarary CURL">
+            <title>OpenATV Libarary_CURL Control</title> 
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Libarary CURL Order">			
+                <ask>Are You Sure you Want To Install Libarary CURL?</ask>
+                <message>Successfully Installed And Updated!</message>
+                <command><![CDATA[ opkg install curl ]]></command>
+            </item>
+        </menu>
+
+        <!-- OpenATV Libarary_ASTRA-SM -->        
+        <menu text="OpenATV Libarary_ASTRA-SM" icon="icons/plugins.png" description="Install And Update Libarary ASTRA-SM">
+            <title>OpenATV Libarary_ASTRA-SM Control</title> 
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Libarary ASTRA-SM Order">			
+                <ask>Are You Sure you Want To Install Libarary ASTRA-SM?</ask>
+                <message>Successfully Installed And Updated!</message>
+                <command><![CDATA[ opkg install astra-sm ]]></command>
+            </item>
+        </menu>
+
+        <!-- OpenATV Libarary_FFMPEG -->        
+        <menu text="OpenATV Libarary_FFMPEG" icon="icons/plugins.png" description="Install And Update Library FFMPEG">
+            <title>OpenATV Libarary_FFMPEG Control</title>  
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Library FFMPEG Order">			
+                <ask>Are You Sure you Want To Install Library FFMPEG?</ask>
+                <message>Successfully Installed And Updated!</message>
+                <command><![CDATA[ opkg install ffmpeg ]]></command>
+            </item>
+        </menu>
+
+    </menu>
+
+
+    <!-- ======================================================= -->
+    <!-- 2. Panels Category -->
+    <!-- ======================================================= -->
+    <menu text="Panel Plugins" icon="icons/plugins.png">
+        <title>Panel Plugins</title>
+
+        <!-- AJ Panel - By AMAJamry -->  
+        <menu text="AJ Panel" icon="icons/plugins.png" description="Enigma Manager Tool - By AMAJamry">
+            <title>AJ Panel Control</title>	
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update AJPanel">
+                    <ask>Are You Sure you Want To Install And Update AJPanel?</ask>
+                    <message>Successfully Installed And Updated!</message>                
+                    <command><![CDATA[ wget https://raw.githubusercontent.com/AMAJamry/AJPanel/main/installer.sh -O - | /bin/sh ]]></command>
+                </item>	
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove AJPanel">			
+                    <ask>Are You Sure you Want To Remove AJPanel?</ask>
+                    <message>Successfully Removed!</message>                
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-ajpanel; else opkg remove --force-depends enigma2-plugin-extensions-ajpanel; fi && rm -rf /usr/lib/enigma2/python/Plugins/Extensions/AJPan/ && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+		</menu>
+
+        <!-- Linux Sat Panel - By Belfagor -->  
+        <menu text="Linux Sat Panel" icon="icons/plugins.png" description="Enigma Addons Tool - By Belfagor">
+            <title>Linux Sat Panel Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Linux Sat Panel">			
+                   <ask>Are You Sure you Want To Install And Update Linux Sat Panel?</ask>
+                   <message>Successfully Installed And Updated!</message>
+                   <command><![CDATA[ wget -q "--no-check-certificate" https://raw.githubusercontent.com/Belfagor2005/LinuxsatPanel/main/installer.sh -O - | /bin/sh ]]></command>
+                </item>	
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Linux Sat Panel">			
+                    <ask>Are You Sure you Want To Remove Linux Sat Panel?</ask>			
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-linuxsatpanel; else opkg remove --force-depends enigma2-plugin-extensions-linuxsatpanel; fi && rm -rf "/usr/lib/enigma2/python/Plugins/Extensions/linuxsatpanel" && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+		</menu>
+
+        <!-- Magic Panel Max - By Hamdy Ahmed -->  
+        <menu text="Magic Panel Max" icon="icons/plugins.png" description="Enigma Addons Tool - By Hamdy Ahmed">
+            <title>Magic Panel Max Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Magic Panel Max">			
+                    <ask>Are You Sure you Want To Install And Update Magic Panel Max?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -q "--no-check-certificate" https://raw.githubusercontent.com/Ham-ahmed/G12/refs/heads/main/MagicPanelMax-install.sh -O - | /bin/sh ]]></command>
+                </item>	
+			    <item text="Order To Remove" icon="icons/setup.png" description="Remove Magic Panel Max">
+                    <ask>Are You Sure you Want To Remove Magic Panel Max?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-magicpanelmax; else opkg remove --force-depends enigma2-plugin-extensions-magicpanelmax; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+		</menu>
+
+        <!-- Emil Panel Pro - By Emil Nabil -->  
+        <menu text="Emil Panel Pro" icon="icons/plugins.png" description="Enigma Addons Tool - By Emil Nabil">
+            <title>Emil Panel Pro Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Emil Panel Pro">			
+                    <ask>Are You Sure you Want To Install And Update Emil Panel Pro?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget https://raw.githubusercontent.com/emilnabil/download-plugins/refs/heads/main/EmilPanelPro/emilpanelpro.sh -O - | /bin/sh ]]></command>
+                </item>	
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Emil Panel Pro">				
+                    <ask>Are You Sure you Want To Remove Emil Panel Pro?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-emilpanelpro; else opkg remove --force-depends enigma2-plugin-extensions-emilpanelpro; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+		</menu>
+
+        <!-- Mohamed Store - By Mohamed -->  
+        <menu text="Mohamed Store" icon="icons/plugins.png" description="Enigma Addons Tool - By Mohamed">
+            <title>Mohamed Store Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Mohamed Store">			
+                    <ask>Are You Sure you Want To Install And Update Mohamed Store?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -O - https://raw.githubusercontent.com/wwwgoper77-wq/MohamedStore/main/install.sh | sh ]]></command>
+                </item>	
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Mohamed Store">				
+                    <ask>Are You Sure you Want To Remove Mohamed Store?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-mohamedstore; else opkg remove --force-depends enigma2-plugin-extensions-mohamedstore; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+		</menu>
+
+        <!-- Enigma Play-Repo - By Ahmad Arjan -->  
+        <menu text="Enigma Play-Repo" icon="icons/plugins.png" description="Enigma Addons Tool - By Ahmad Arjan">
+            <title>Enigma Play-Repo Control</title>	
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Enigma Play-Repo">			
+                    <ask>Are You Sure you Want To Install And Update Enigma Play-Repo?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -qO- https://raw.githubusercontent.com/Ahmadarjan1/EnigmaPlay-Repo/main/install.sh | sh ]]></command>
+                </item>	
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Enigma Play-Repo">				
+                    <ask>Are You Sure you Want To Remove Enigma Play-Repo?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-enigmaplayrepo; else opkg remove --force-depends enigma2-plugin-extensions-enigmaplayrepo; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+		</menu>
+		
+    </menu>
+
+
+    <!-- ======================================================= -->
+    <!-- 3. Tools Category -->
+    <!-- ======================================================= -->
+    <menu text="Tools Plugins" icon="icons/pvr.png">
+        <title>Tools Plugins</title>
+
+        <!-- Arabic Savior - By Fairbird -->
+        <menu text="Arabic Savior" icon="icons/plugins.png" description="Arabic Language Tool - By Fairbird">
+            <title>Arabic Savior Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Arabic Savior">			
+                    <ask>Are You Sure you Want To Install And Update Arabic Savior?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget https://raw.githubusercontent.com/fairbird/ArabicSavior/main/installer.sh -O - | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Arabic Savior">				
+                    <ask>Are You Sure you Want To Remove Arabic Savior?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-arabicsavior; else opkg remove --force-depends enigma2-plugin-extensions-arabicsavior; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>            
+        </menu>
+
+        <!-- Arabic Savior - By Mohamed Nasser -->
+        <menu text="Arabic Savior" icon="icons/plugins.png" description="Arabic Language Tool - By Mohamed Nasser">
+            <title>Arabic Savior Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Arabic Savior">			
+                    <ask>Are You Sure you Want To Install And Update Arabic Savior?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -qO- https://raw.githubusercontent.com/popking159/ArabicSavior/refs/heads/main/myinstaller.sh | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Arabic Savior">				
+                    <ask>Are You Sure you Want To Remove Arabic Savior?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-arabicsavior; else opkg remove --force-depends enigma2-plugin-extensions-arabicsavior; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>            
+        </menu>        
+  
+        <!-- Emil Remove Package - By Belfagor -->
+        <menu text="Emil Remove Package" icon="icons/plugins.png" description="Removing Plugin & Skins Tool - By Emil Nabil">
+            <title>Emil Remove Package Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Emil Remove Package">			
+                    <ask>Are You Sure you Want To Install And Update Emil Remove Package?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -q "--no-check-certificate" https://github.com/emilnabil/download-plugins/raw/refs/heads/main/EmilRemovePackage/EmilRemovePackage.sh -O - | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Emil Remove Package">				
+                    <ask>Are You Sure you Want To Remove Emil Remove Package?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-emilremovepackage; else opkg remove --force-depends enigma2-plugin-extensions-emilremovepackage; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>            
+        </menu>
+
+        <!-- Crash Log Viewer - By Belfagor -->
+        <menu text="Crash Log Viewer" icon="icons/plugins.png" description="Crash Log Viewer - By Belfagor">
+            <title>Crash Log Viewer Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Crash Log Viewer">			
+                    <ask>Are You Sure you Want To Install And Update Crash Log Viewer?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -q --no-check-certificate https://raw.githubusercontent.com/Belfagor2005/CrashlogViewer/main/installer.sh -O - | /bin/bash ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Crash Log Viewer">			
+                    <ask>Are You Sure you Want To Remove Crash Log Viewer?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-crashlogviewer; else opkg remove --force-depends enigma2-plugin-extensions-crashlogviewer; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>            
+        </menu>
+
+        <!-- Raed Quick Signal - By Fairbird -->
+        <menu text="Raed Quick Signal" icon="icons/plugins.png" description="Channel Signal Viewer - By Fairbird">
+            <title>Raed Quick Signal Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Raed Quick Signal">			
+                    <ask>Are You Sure you Want To Install And Update Raed Quick Signal?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget https://raw.githubusercontent.com/fairbird/RaedQuickSignal/main/installer.sh -O - | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Raed Quick Signal">				
+                    <ask>Are You Sure you Want To Remove Raed Quick Signal?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-raedquicksignal; else opkg remove --force-depends enigma2-plugin-extensions-raedquicksignal; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>            
+        </menu>
+		
+        <!-- Time Shift Delay - By Mosad -->
+        <menu text="Time Shift Delay" icon="icons/plugins.png" description="Adding Time Shift To Audio - By Mosad">
+            <title>Time Shift Delay Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Time Shift Delay">			
+                    <ask>Are You Sure you Want To Install And Update Time Shift Delay?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -qO - http://dreambox4u.com/mosadpro/scripts/timeshift-delay.sh | sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Time Shift Delay">				
+                    <ask>Are You Sure you Want To Remove Time Shift Delay?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-timeshiftdelay; else opkg remove --force-depends enigma2-plugin-extensions-timeshiftdelay; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>            
+        </menu>		
+
+        <!-- Custom Channel Selection - By Mohamed Nasser -->
+        <menu text="Custom Channel Selection" icon="icons/plugins.png" description="Adding Many Custom Channel Selection - Mohamed Nasser">
+            <title>Custom Channel Selection Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Custom Channel Selection">			
+                    <ask>Are You Sure you Want To Install And Update Custom Channel Selection?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -qO - https://raw*githubusercontent*com/popking159/customchannelselection/refs/heads/main/myinstaller.sh | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Custom Channel Selection">				
+                    <ask>Are You Sure you Want To Remove Custom Channel Selection?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-customchannelselection; else opkg remove --force-depends enigma2-plugin-extensions-customchannelselection; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>            
+        </menu>
+  
+    </menu>
+
+
+    <!-- ======================================================= -->
+    <!-- 4. Softcam Category -->
+    <!-- ======================================================= -->
+    <menu text="Softcam Plugins" icon="icons/key.png">
+        <title>Softcam Plugins</title>
+
+        <!-- NCam EMU - By Fairbird -->
+        <menu text="NCam EMU" icon="icons/plugins.png" description="Softcam NCam Emu - By Fairbird">
+            <title>NCam EMU Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update NCam Emu">			
+                    <ask>Are You Sure you Want To Install And Update NCam Emu?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget https://raw.githubusercontent.com/biko-73/Ncam_EMU/main/installer.sh -O - | /bin/sh ]]></command>
+                </item>
+        </menu>
+
+        <!-- OSCam EMU - By Linux Sat -->
+        <menu text="OSCam EMU" icon="icons/plugins.png" description="Softcam OSCam Emu - By Linux Sat">
+            <title>OSCam EMU Control</title>
+                <item text="Order To Install & Update" icon="icons/download.png" description="Install And Update OSCam Emu">			
+                    <ask>Are You Sure you Want To Install And Update OSCam Emu?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget https://raw.githubusercontent.com/biko-73/OsCam_EMU/main/installer.sh -O - | /bin/sh ]]></command>
+                </item>
+        </menu>
+
+        <!-- OSCam ICAM - By Kitte888 -->
+        <menu text="OSCam ICAM" icon="icons/plugins.png" description="Softcam OSCam ICAM - By Kitte888">
+            <title>OSCam ICAM Control</title>        
+            <ask>Are You Sure you Want To Install And Update OSCam ICAM?</ask>
+            <message>Successfully Installed And Updated!</message>
+            <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update OSCam ICAM">
+                <command><![CDATA[ wget https://raw.githubusercontent.com/biko-73/OSCamicam_Kitte888/main/installer.sh -O - | /bin/sh ]]></command>
+            </item>
+        </menu>
+
+        <!-- Power CAM - By Mohamed OS -->
+        <menu text="Power CAM" icon="icons/plugins.png" description="Softcam OSCam ICAM - By Mohamed OS">
+            <title>OSCam ICAM Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Power CAM">			
+                    <ask>Are You Sure you Want To Install And Update Power CAM?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -qO- --no-check-certificate "https://gitlab.com/MOHAMED_OS/dz_store/-/raw/main/Cam_Emulator/online-setup" | bash -s powercam ]]></command>
+                </item>
+        </menu>
+
+        <!-- Key Adder - By Fairbird -->
+        <menu text="Key Adder" icon="icons/plugins.png" description="Adding Keys for Softcam - By Fairbird">
+            <title>Key Adder Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Key Adder">			
+                    <ask>Are You Sure you Want To Install And Update Key Adder?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget https://raw.githubusercontent.com/fairbird/KeyAdder/main/installer.sh -O - | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Key Adder">				
+                    <ask>Are You Sure you Want To Remove Key Adder?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-keyadder; else opkg remove --force-depends enigma2-plugin-extensions-keyadder; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>			
+        </menu>
+		
+        <!-- E2 Biss Key Editor - By Ismail -->
+        <menu text="E2 Biss Key Editor" icon="icons/plugins.png" description="Adding Keys for Softcam - By Ismail">
+            <title>E2 Biss Key Editor Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update E2 Biss Key Editor">			
+                    <ask>Are You Sure you Want To Install And Update E2 Biss Key Editor?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -q -O - https://raw.githubusercontent.com/ismail9875/E2BissKeyEditor/refs/heads/main/installer.sh | /bin/bash ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove E2 Biss Key Editor">				
+                    <ask>Are You Sure you Want To Remove E2 Biss Key Editor?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-e2bisskeyeditor; else opkg remove --force-depends enigma2-plugin-extensions-e2bisskeyeditor; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>			
+        </menu>		
+
+        <!-- Fury Biss - By Islam Salama -->
+        <menu text="Fury Biss" icon="icons/plugins.png" description="Get Feeds & Adding Keys for Softcam - By Islam Salama">
+            <title>Fury Biss Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Fury Biss">			
+                    <ask>Are You Sure you Want To Install And Update Fury Biss?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -q "--no-check-certificate" https://raw.githubusercontent.com/islam-2412/FuryBiss/refs/heads/main/fury/installer.sh -O - | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Fury Biss">				
+                    <ask>Are You Sure you Want To Remove Fury Biss?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-furybiss; else opkg remove --force-depends enigma2-plugin-extensions-furybiss; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>			
+        </menu>
+		
+    </menu>
+
+
+    <!-- ======================================================= -->
+    <!-- 5. Audio Category -->
+    <!-- ======================================================= -->
+    <menu text="Audio Plugins" icon="icons/player.png">
+        <title>Audio Plugins</title>
+
+        <!-- IP Audio Pro - BY ZKhadiri -->
+        <menu text="IP Audio Pro" icon="icons/plugins.png" description="Playing External IP Audio - By Zakaria Khadiri">
+            <title>IP Audio Pro Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update IP Audio Pro">			
+                    <ask>Are You Sure you Want To Install And Update IP Audio Pro?</ask>
+                    <message>Successfully Installed And Updated!</message>	
+                    <command><![CDATA[ wget -q "--no-check-certificate" https://raw.githubusercontent.com/zKhadiri/IPAudioPro-Releases-/refs/heads/main/installer.sh -O - | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove IP Audio Pro">				
+                    <ask>Are You Sure you Want To Remove IP Audio Pro?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-ipaudiopro; else opkg remove --force-depends enigma2-plugin-extensions-ipaudiopro; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+
+        <!-- Ultra Audio - By Ahmed L-Hadary -->        
+        <menu text="Ultra Audio" icon="icons/plugins.png" description="Playing External IP Audio - By Ahmed EL-Hadary">
+            <title>Ultra Audio Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Ultra Audio">			
+                    <ask>Are You Sure you Want To Install And Update Ultra Audio?</ask>
+                    <message>Successfully Installed And Updated!</message>	
+                    <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Ultra Audio">
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Ultra Audio">					
+                    <ask>Are You Sure you Want To Remove Ultra Audio?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-ultraaudio; else opkg remove --force-depends enigma2-plugin-extensions-ultraaudio; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+
+        <!-- IP Audio Plus - By Ahmad Arjan -->        
+        <menu text="IP Audio Plus" icon="icons/plugins.png" description="Playing External IP Audio - By Ahmad Arjan">
+            <title>IP Audio Plus Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update IP Audio Plus">			
+                    <ask>Are You Sure you Want To Install And Update IP Audio Plus?</ask>
+                    <message>Successfully Installed And Updated!</message>	
+                    <command><![CDATA[ wget -q "--no-check-certificate" https://raw.githubusercontent.com/Ahmadarjan1/IPAudioPlus-Releases/refs/heads/main/installer.sh -O - | /bin/bash ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove IP Audio Plus">				
+                    <ask>Are You Sure you Want To Remove IP Audio Plus?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-ipaudioplus; else opkg remove --force-depends enigma2-plugin-extensions-ipaudioplus; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+
+        <!-- Alkuds Ipaudio MAC Xtreme Player - By Ibrahim Hamdy -->        
+        <menu text="Alkuds Ipaudio MAC Xtreme Player" icon="icons/plugins.png" description="Playing External IP Audio & IPTV - By Ibrahim Hamdy">
+            <title>Alkuds Ipaudio MAC Xtreme Player Control</title>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove IP Audio Plus">			
+                    <ask>Are You Sure you Want To Install And Update Alkuds Ipaudio?</ask>
+                    <message>Successfully Installed And Updated!</message>	
+                    <command><![CDATA[ wget -qO- https://raw.githubusercontent.com/xximhxx/Alkuds-ipaudio-MAC-Xtreme-Player/main/installer.sh | sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Alkuds Ipaudio MAC Xtreme Player">				
+                    <ask>Are You Sure you Want To Remove Alkuds Ipaudio?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-alkudsipaudiomacxtremeplayer; else opkg remove --force-depends enigma2-plugin-extensions-alkudsipaudiomacxtremeplayer; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+
+        <!-- My Hits - By Mohamed Nasser -->        
+        <menu text="My Hits" icon="icons/plugins.png" description="Playing & Downloading Songs - By Mohamed Nasser">
+            <title>My Hits Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update My Hits">			
+                    <ask>Are You Sure you Want To Install And Update My Hits?</ask>
+                    <message>Successfully Installed And Updated!</message>	
+                    <command><![CDATA[ wget -qO - https://raw.githubusercontent.com/popking159/myhits/refs/heads/main/myinstaller.sh | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove My Hits">				
+                    <ask>Are You Sure you Want To Remove My Hits?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-myhits; else opkg remove --force-depends enigma2-plugin-extensions-myhits; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>				
+        </menu>
+
+    </menu>
+	
+	
+    <!-- ======================================================= -->
+    <!-- 6. Subtitle Category -->
+    <!-- ======================================================= -->
+    <menu text="Subtitle Plugins" icon="icons/txt.png">
+        <title>Subtitle Plugins</title>
+
+        <!-- Subs Support Pro - By Mohamed Nasser -->
+        <menu text="Subs Support Pro" icon="icons/plugins.png" description="Professional, Ready-To-Use Translation Files - By Mohamed Nasser">
+            <title>Subs Support Pro Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Subs Support Pro">            
+                    <ask>Are You Sure you Want To Install And Update Subs Support Pro?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -qO - https://raw.githubusercontent.com/popking159/SubsSupportPro/refs/heads/main/myinstaller.sh | /bin/sh ]]></command>
+                </item> 
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Subs Support Pro">				
+                    <ask>Are You Sure you Want To Remove Sub Extractor Lite?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-subssupportpro; else opkg remove --force-depends enigma2-plugin-extensions-subssupportpro; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+
+        <!-- Sub Extractor Lite - By Arian7 -->
+        <menu text="Sub Extractor Lite" icon="icons/plugins.png" description="Subtitle For DVB And TXT - By Arian7">
+            <title>Sub Extractor Lite Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Sub Extractor Lite">            
+                    <ask>Are You Sure you Want To Install And Update Sub Extractor Lite?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget https://raw.githubusercontent.com/Arian7s/SubExtractorLite/main/installer.sh -O - | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Sub Extractor Lite">				
+                    <ask>Are You Sure you Want To Remove Sub Extractor Lite?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-SubExtractorLite; else opkg remove --force-depends enigma2-plugin-extensions-SubExtractorLite; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+
+        <!-- My Translator V1.74 - By Ismail Elkhooly -->
+        <menu text="My Translator V1.74" icon="icons/plugins.png" description="Subtitle For DVB And Audio - By Ismail Elkhooly">
+            <title>My Translator V1.74 Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update My Translator V1.74">            
+                    <ask>Are You Sure you Want To Install And Update My Translator V1.74?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -O /tmp/mytranslator.ipk "https://github.com/ismailelkhooly/Ismail-/raw/refs/heads/main/enigma2-plugin-extensions-mytranslator_1.74.ipk" && opkg install --force-reinstall /tmp/mytranslator.ipk && rm -f /tmp/mytranslator.ipk ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove My Translator V1.74">				
+                    <ask>Are You Sure you Want To Remove My Translator V1.74?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-mytranslator_1.74; else opkg remove --force-depends enigma2-plugin-extensions-mytranslator_1.74; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>				
+        </menu>
+
+    </menu>
+
+
+    <!-- ======================================================= -->
+    <!-- 7. EPG Category -->
+    <!-- ======================================================= -->
+    <menu text="EPG Plugins" icon="icons/epg.png">
+        <title>EPG Plugins</title>
+
+        <!-- EPG Import - By SaiedF -->
+        <menu text="EPG Import" icon="icons/plugins.png" description="Emport EPG For Channels - By SaiedF">
+            <title>EPG Import Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update EPG Import">            
+                    <ask>Are You Sure you Want To Install And Update EPG Import?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -qO- "https://raw.githubusercontent.com/Saiedf/EPGImport/main/installer_epgimportiet5_auto.sh" | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove EPG Import">            
+                    <ask>Are You Sure you Want To Remove EPG Import?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-epgimport; else opkg remove --force-depends enigma2-plugin-extensions-epgimport; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+
+        <!-- EPG Grabber - By Ziko -->
+        <menu text="EPG Grabber" icon="icons/plugins.png" description="Emport EPG For Channels - By Ziko">
+            <title>EPG Grabber Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update EPG Grabber">            
+                    <ask>Are You Sure you Want To Install And Update EPG Grabber?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -q "--no-check-certificate" https://raw.githubusercontent.com/ziko-ZR1/Epg-plugin/master/Download/installer.sh -O - | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove EPG Grabber">				
+                    <ask>Are You Sure you Want To Remove EPG Grabber?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-epggrabber; else opkg remove --force-depends enigma2-plugin-extensions-epggrabber; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+
+        <!--  Youre Watching - By Asdrere -->
+        <menu text="Youre Watching" icon="icons/plugins.png" description="Free & Paid IPTV - By Ahmed EL-Hadary">
+            <title>Youre Watching Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Youre Watching">            
+                    <ask>Are You Sure you Want To Install And Update Youre Watching?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget --no-check-certificate -qO- "https://raw.githubusercontent.com/asdrere123-alt/YoureWatching/main/install_yourewatching.sh?t=$(date +%s)" | bash ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Ultra Stalker">				
+                    <ask>Are You Sure you Want To Remove Youre Watching?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-yourewatching; else opkg remove --force-depends enigma2-plugin-extensions-yourewatching; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+
+    </menu>
+
+
+    <!-- ======================================================= -->
+    <!-- 8. IPTV Category -->
+    <!-- ======================================================= -->
+    <menu text="IPTV Plugins" icon="icons/iptv.png">
+        <title>IPTV Plugins</title>
+
+        <!-- My Streamer - By Mohamed Nasser -->
+        <menu text="My Streamer" icon="icons/plugins.png" description="Free IPTV Sites - By Mohamed Nasser">
+            <title>My Streamer Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update My Streamer">            
+                    <ask>Are You Sure you Want To Install And Update My Streamer?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -qO - https://raw.githubusercontent.com/popking159/MyStreamer/refs/heads/main/myinstaller.sh | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove My Streamer">				
+                    <ask>Are You Sure you Want To Remove My Streamer?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-mystreamer; else opkg remove --force-depends enigma2-plugin-extensions-mystreamer; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+
+        <!-- Ultra Stalker - By Ahmed EL-Hadary -->
+        <menu text="Ultra Stalker" icon="icons/plugins.png" description="Free & Paid IPTV - By Ahmed EL-Hadary">
+            <title>Ultra Stalker Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Ultra Stalker">            
+                    <ask>Are You Sure you Want To Install And Update Ultra Stalker?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -qO- https://raw.githubusercontent.com/K3bOra/-UltraStalker/main/install.sh | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Ultra Stalker">				
+                    <ask>Are You Sure you Want To Remove Ultra Stalker?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-ultrastalker; else opkg remove --force-depends enigma2-plugin-extensions-ultrastalker; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+
+        <!-- Xtream New - By Ahmed Hussein -->
+        <menu text="Xtream New" icon="icons/plugins.png" description="Paid IPTV - By Ahmed Hussein">
+            <title>Xtream New Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Xtream New">            
+                    <ask>Are You Sure you Want To Install And Update Xtream New?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -q --no-check-certificate "https://raw.githubusercontent.com/ahmedhussein4342-lgtm/XtreamNew/main/install_xtreamnew.sh?cb=$(date +%s)" -O - | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Xtream New">            
+                    <ask>Are You Sure you Want To Remove Xtream New?</ask>
+                    <message>Successfully Removed!</message>
+                    <item text="Order To Remove" icon="icons/setup.png" description="Remove Xtream New">
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-xtreamnew; else opkg remove --force-depends enigma2-plugin-extensions-xtreamnew; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+
+        <!-- Tivi Mate E2 - By Opes Boy -->
+        <menu text="Tivi Mate E2" icon="icons/plugins.png" description="Free & Paid IPTV - By Opes Boy">
+            <title>Tivi Mate E2 Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Tivi Mate E2">            
+                    <ask>Are You Sure you Want To Install And Update Tivi Mate E2?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -qO- https://raw.githubusercontent.com/opesboy/TiviMateE2/main/install.sh | sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Tivi Mate E2">				
+                    <ask>Are You Sure you Want To Remove Tivi Mate E2?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-tivimatee2; else opkg remove --force-depends enigma2-plugin-extensions-tivimatee2; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+
+        <!-- E2I Player - By OE-Mirrors -->
+        <menu text="E2I Player" icon="icons/plugins.png" description="Free IPTV Sites - By OE-Mirrors">
+            <title>E2I Player Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update E2I Player">            
+                    <ask>Are You Sure you Want To Install And Update E2I Player?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget --no-check-certificate "https://github.com/oe-mirrors/e2iplayer/archive/refs/heads/python3.zip" -O /tmp/e2iplayer-python3.zip && unzip /tmp/e2iplayer-python3.zip -d /tmp/ && cp -rf /tmp/e2iplayer-python3/IPTVPlayer /usr/lib/enigma2/python/Plugins/Extensions && rm -f /tmp/e2iplayer-python3.zip && rm -fr /tmp/e2iplayer-master ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove E2I Player">				
+                    <ask>Are You Sure you Want To Remove E2I Player?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-e2iplayer; else opkg remove --force-depends enigma2-plugin-extensions-e2iplayer; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+		
+        <!-- E2I Player - By Mohamed OS -->
+        <menu text="E2I Player" icon="icons/plugins.png" description="Free IPTV Sites - By Mohamed OS">
+            <title>E2I Player Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update E2I Player">            
+                    <ask>Are You Sure you Want To Install And Update E2I Player?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget --no-check-certificate -qO - "https://raw.githubusercontent.com/MOHAMED19OS/Install_E2I/refs/heads/main/online-setup.sh" | bash ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove E2I Player">				
+                    <ask>Are You Sure you Want To Remove E2I Player?</ask>
+                    <message>Successfully Removed And Updated!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-e2iplayer; else opkg remove --force-depends enigma2-plugin-extensions-e2iplayer; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>		
+
+        <!-- E2I Player - By Mohamed_Angel Heart -->
+        <menu text="E2I Player" icon="icons/plugins.png" description="Free IPTV Sites (OE-Mirrors And TSI Panel) - By Angel Heart">
+            <title>E2I Player Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update E2I Player">            
+                    <ask>Are You Sure you Want To Install And Update E2I Player?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget --no-check-certificate -qO - "https://raw.githubusercontent.com/MOHAMED19OS/Install_E2I/refs/heads/main/online-setup.sh" | bash ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove E2I Player">				
+                    <ask>Are You Sure you Want To Remove E2I Player?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-e2iplayer; else opkg remove --force-depends enigma2-plugin-extensions-e2iplayer; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>	
+
+    </menu>
+
+
+    <!-- ======================================================= -->
+    <!-- 9. Skin Category -->
+    <!-- ======================================================= -->
+    <menu text="Skin Plugins" icon="icons/palette.png">
+        <title>Skin Plugins</title>
+
+        <!-- Aglarea TV - By Mohamed Nasser -->
+        <menu text="Aglarea TV" icon="icons/plugins.png" description="Skin - By Mohamed Nasser">
+            <title>Aglarea TV Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Aglarea TV">            
+                    <ask>Are You Sure you Want To Install And Update Aglarea TV?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -qO - https://raw.githubusercontent.com/popking159/skins/refs/heads/main/aglareatv/myinstaller.sh | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Aglarea TV">				
+                    <ask>Are You Sure you Want To Remove Aglarea TV?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-aglareatv; else opkg remove --force-depends enigma2-plugin-extensions-aglareatv; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+
+        <!-- Aglarea PLI - By Mohamed Nasser -->
+        <menu text="Aglarea PLI" icon="icons/plugins.png" description="Skin - By Mohamed Nasser">
+            <title>Aglarea TV Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Aglarea PLI">            
+                    <ask>Are You Sure you Want To Install And Update Aglarea PLI?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -qO - https://raw.githubusercontent.com/popking159/skins/refs/heads/main/aglarepli/myinstaller.sh | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Aglarea PLI">				
+                    <ask>Are You Sure you Want To Remove Aglarea PLI?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-aglarepli; else opkg remove --force-depends enigma2-plugin-extensions-aglarepli; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+        
+        <!-- Fury - By Islam Salama -->
+        <menu text="Fury" icon="icons/plugins.png" description="Skin - By Islam Salama">
+            <title>Fury Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Fury">            
+                    <ask>Are You Sure you Want To Install And Update Fury?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -q "--no-check-certificate" https://raw.githubusercontent.com/islam-2412/IPKS/refs/heads/main/fury/installer.sh -O - | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Fury">				
+                    <ask>Are You Sure you Want To Remove Fury?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-fury; else opkg remove --force-depends enigma2-plugin-extensions-fury; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+
+        <!-- CineView-MLA - By Habeb -->
+        <menu text="CineView-MLA" icon="icons/plugins.png" description="Skin - By Habeb">
+            <title>CineView-MLA Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update CineView-MLA">            
+                    <ask>Are You Sure you Want To Install And Update CineView-MLA?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -qO /tmp/cineview-install.sh https://raw.githubusercontent.com/habeb-s/CineView-MLA-Install/main/cineview-install.sh && sh /tmp/cineview-install.sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove CineView-MLA">				
+                    <ask>Are You Sure you Want To Remove CineView-MLA?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-cineviewmla; else opkg remove --force-depends enigma2-plugin-extensions-cineviewmla; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+
+        <!-- Obsidian-FHD - By Black Attack -->
+        <menu text="Obsidian-FHD" icon="icons/plugins.png" description="Skin - By Black Attack">
+            <title>Obsidian-FHD Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Obsidian-FHD">            
+                    <ask>Are You Sure you Want To Install And Update Obsidian-FHD?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -qO- https://raw.githubusercontent.com/dali44g/Obsidian-FHD/main/install.sh | sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Obsidian-FHD">				
+                    <ask>Are You Sure you Want To Remove Obsidian-FHD?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-obsidianfhd; else opkg remove --force-depends enigma2-plugin-extensions-obsidianfhd; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+
+        <!-- Jihad - By Ahmed -->
+        <menu text="Jihad" icon="icons/plugins.png" description="Skin - By Ahmed">
+            <title>Jihad Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Jihad">            
+                    <ask>Are You Sure you Want To Install And Update Jihad?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -q "--no-check-certificate" https://raw.githubusercontent.com/ahmeds200917/A…nstall_jihad.sh -O - | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Jihad">				
+                    <ask>Are You Sure you Want To Remove Jihad?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-jihad; else opkg remove --force-depends enigma2-plugin-extensions-jihad; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+
+        <!-- Mohammed Skin - By Mido -->
+        <menu text="Mohammed Skin" icon="icons/plugins.png" description="Skin - By Mido">
+            <title>Mohammed Skin Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Mohammed Skin">            
+                    <ask>Are You Sure you Want To Install And Update Mohammed Skin?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -q --no-check-certificate "https://raw.githubusercontent.com/mido00020/MohammedSkin/main/installer.sh" -O - | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Mohammed Skin">				
+                    <ask>Are You Sure you Want To Remove Mohammed Skin?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-mohammedskin; else opkg remove --force-depends enigma2-plugin-extensions-mohammedskin; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+
+    </menu>
+
+
+    <!-- ======================================================= -->
+    <!-- 10. Others Category -->
+    <!-- ======================================================= -->
+    <menu text="Others Plugins" icon="icons/info.png">
+        <title>Others Plugins</title>
+        
+        <!-- Foot On Sat - By Fairbird -->
+        <menu text="Fury" icon="icons/plugins.png" description="For Football Results - By Fairbird">
+            <title>Foot On Sat Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Foot On Sat">			
+                    <ask>Are You Sure you Want To Install And Update Foot On Sat?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget https://raw.githubusercontent.com/fairbird/FootOnsat/main/Download/install.sh -O - | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Foot On Sat">				
+                    <ask>Are You Sure you Want To Remove Foot On Sat?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-footonsat; else opkg remove --force-depends enigma2-plugin-extensions-footonsat; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+
+        <!-- Server Coloring - By Islam Salama -->
+        <menu text="Server Coloring" icon="icons/plugins.png" description="Give Channel Color That Playing With Server - By Islam Salama">
+            <title>Server Coloring Control</title>
+                <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Server Coloring">			
+                    <ask>Are You Sure you Want To Install And Update Server Coloring?</ask>
+                    <message>Successfully Installed And Updated!</message>
+                    <command><![CDATA[ wget -q "--no-check-certificate" https://raw.githubusercontent.com/islam-2412/ServerColoring/refs/heads/main/fury/installer.sh -O - | /bin/sh ]]></command>
+                </item>
+                <item text="Order To Remove" icon="icons/setup.png" description="Remove Server Coloring">				
+                    <ask>Are You Sure you Want To Remove Foot On Sat?</ask>
+                    <message>Successfully Removed!</message>
+                    <command><![CDATA[ if which dpkg > /dev/null 2>&1; then apt-get purge -y enigma2-plugin-extensions-servercoloring; else opkg remove --force-depends enigma2-plugin-extensions-servercoloring; fi && systemctl restart enigma2 || killall -9 enigma2 ]]></command>
+                </item>
+        </menu>
+
+    </menu>
+
+
+    <!-- ======================================================= -->
+    <!-- 11. Bootlogo Category -->
+    <!-- ======================================================= -->
+    <menu text="Bootlogo" icon="icons/file.png">
+        <title>Bootlogo</title>
+
+        <!-- Boot Logo Name --> 
+        <item text="Boot Logo Plugin Name" icon="icons/download.png" description="For Boot Logo Wallpaper">		
+            <ask>Are You Sure you Want To Change Bootlogo?</ask>		
+            <message>Successfully Changed!</message>
+            <command><![CDATA[ wget -qO- https://raw.githubusercontent.com" ]]></command>
+        </item>
+
+    </menu>
+
+
+    <!-- ======================================================= -->
+    <!-- 12. Spinners Category -->
+    <!-- ======================================================= -->
+    <menu text="Spinners" icon="icons/position.png">
+        <title>Spinners</title>
+		
+        <!-- Spinners Name --> 
+        <item text="Spinners Plugin Name" icon="icons/download.png" description="For Loading Icons">		
+            <ask>Are You Sure you Want To Change Spinner?</ask>
+            <message>Successfully Changed!</message>
+            <command><![CDATA[ wget -qO- https://raw.githubusercontent.com" ]]></command>
+        </item>
+
+    </menu>
+
+</menu>
