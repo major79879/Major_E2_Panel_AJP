@@ -554,7 +554,7 @@
         </menu>
 
         <!--  Youre Watching - By Asdrere -->
-        <menu text="Youre Watching" icon="icons/plugins.png" description="Free & Paid IPTV - By Ahmed EL-Hadary">
+        <menu text="Youre Watching" icon="icons/plugins.png" description="Free And Paid IPTV - By Ahmed EL-Hadary">
             <title>Youre Watching Control</title>
                 <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Youre Watching">            
                     <ask>Are You Sure you Want To Install And Update Youre Watching?</ask>
