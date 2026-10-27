@@ -838,36 +838,4 @@
 
     </menu>
 
-
-    <!-- ======================================================= -->
-    <!-- 11. Bootlogo Category -->
-    <!-- ======================================================= -->
-    <menu text="Bootlogo" icon="icons/file.png">
-        <title>Bootlogo</title>
-
-        <!-- Boot Logo Name --> 
-        <item text="Boot Logo Plugin Name" icon="icons/download.png" description="For Boot Logo Wallpaper">		
-            <ask>Are You Sure you Want To Change Bootlogo?</ask>		
-            <message>Successfully Changed!</message>
-            <command><![CDATA[ wget -qO- https://raw.githubusercontent.com" ]]></command>
-        </item>
-
-    </menu>
-
-
-    <!-- ======================================================= -->
-    <!-- 12. Spinners Category -->
-    <!-- ======================================================= -->
-    <menu text="Spinners" icon="icons/position.png">
-        <title>Spinners</title>
-		
-        <!-- Spinners Name --> 
-        <item text="Spinners Plugin Name" icon="icons/download.png" description="For Loading Icons">		
-            <ask>Are You Sure you Want To Change Spinner?</ask>
-            <message>Successfully Changed!</message>
-            <command><![CDATA[ wget -qO- https://raw.githubusercontent.com" ]]></command>
-        </item>
-
-    </menu>
-
 </menu>
