@@ -593,7 +593,7 @@
         </menu>
 
         <!-- Ultra Stalker - By Ahmed EL-Hadary -->
-        <menu text="Ultra Stalker" icon="icons/plugins.png" description="Free And Paid IPTV - By Ahmed EL-Hadary">
+        <menu text="Ultra Stalker" icon="icons/plugins.png" description="Adding Free And Paid IPTV - By Ahmed EL-Hadary">
             <title>Ultra Stalker Control</title>
                 <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Ultra Stalker">            
                     <ask>Are You Sure you Want To Install And Update Ultra Stalker?</ask>
@@ -608,7 +608,7 @@
         </menu>
 
         <!-- Xtream New - By Ahmed Hussein -->
-        <menu text="Xtream New" icon="icons/plugins.png" description="Paid IPTV - By Ahmed Hussein">
+        <menu text="Xtream New" icon="icons/plugins.png" description="Adding Paid IPTV - By Ahmed Hussein">
             <title>Xtream New Control</title>
                 <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Xtream New">            
                     <ask>Are You Sure you Want To Install And Update Xtream New?</ask>
@@ -624,7 +624,7 @@
         </menu>
 
         <!-- Tivi Mate E2 - By Opes Boy -->
-        <menu text="Tivi Mate E2" icon="icons/plugins.png" description="Free & Paid IPTV - By Opes Boy">
+        <menu text="Tivi Mate E2" icon="icons/plugins.png" description="Adding Paid IPTV - By Opes Boy">
             <title>Tivi Mate E2 Control</title>
                 <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Tivi Mate E2">            
                     <ask>Are You Sure you Want To Install And Update Tivi Mate E2?</ask>
