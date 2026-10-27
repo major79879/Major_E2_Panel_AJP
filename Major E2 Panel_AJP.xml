@@ -362,7 +362,7 @@
         </menu>		
 
         <!-- Fury Biss - By Islam Salama -->
-        <menu text="Fury Biss" icon="icons/plugins.png" description="Get Feeds & Adding Keys for Softcam - By Islam Salama">
+        <menu text="Fury Biss" icon="icons/plugins.png" description="Get Feeds And Adding Keys for Softcam - By Islam Salama">
             <title>Fury Biss Control</title>
                 <item text="Order To Install And Update" icon="icons/download.png" description="Install And Update Fury Biss">			
                     <ask>Are You Sure you Want To Install And Update Fury Biss?</ask>
